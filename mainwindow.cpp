@@ -15,6 +15,28 @@ MainWindow::MainWindow(QWidget *parent)
     // these two lines are for adding picture
     QPixmap pix("C:/Users/safal/OneDrive/Desktop/BazarMilo/Assets/front_image.png");
     ui->label_pic->setPixmap(pix);
+    QVBoxLayout *mainLayout = new QVBoxLayout(ui->centralwidget);
+
+    QGroupBox *groupBox = new QGroupBox("Group Box");
+    groupBox->setStyleSheet("QGroupBox { background-color: #FFE4C4; border: 2px solid #555555; border-radius: 2px; }");
+    QVBoxLayout *groupBoxLayout = new QVBoxLayout(groupBox);
+
+    QLabel *labelPic = new QLabel;
+    labelPic->setPixmap(pix);
+    labelPic->setScaledContents(true);  // Ensure image scales within the QLabel
+
+    QPushButton *checkYourWork = new QPushButton("Check Your Work");
+
+    groupBoxLayout->addWidget(labelPic, 0, Qt::AlignCenter); // Set alignment for label
+    groupBoxLayout->addWidget(checkYourWork, 0, Qt::AlignCenter); // Set alignment for button
+
+    groupBox->setLayout(groupBoxLayout); // Set layout for group box
+
+    mainLayout->addWidget(groupBox); // Add group box to main layout
+
+    // Set stretch factors for the main layout to control resizing behavior
+    mainLayout->setStretchFactor(groupBox, 1);
+
 
     // Connect signals of LineEdits to updateSubmitButtonState slot
     connect(ui->lineEdit_username, &QLineEdit::textChanged, this, &MainWindow::updateSubmitButtonState);
