@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QVariant>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -37,9 +39,11 @@ private slots:
     void on_lineEdit_Email_textChanged(const QString &text);
 
 
-    void on_lineEdit_Email_cursorPositionChanged(int arg1, int arg2);
-
 private:
     Ui::MainWindow *ui;
+signals:
+    void setCenter(QVariant, QVariant);
+    void addMarker(QVariant, QVariant);
+
 };
 #endif // MAINWINDOW_H

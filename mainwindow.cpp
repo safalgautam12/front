@@ -3,12 +3,23 @@
 #include <QMessageBox>
 #include <QPixmap>
 #include <QRegularExpressionValidator>
+#include <QQuickItem>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->quickWidget->setSource(QUrl(QStringLiteral("qrc:/map.qml")));
+    ui->quickWidget->show();
+
+    auto obj = ui->quickWidget->rootObject();
+    connect(this, SIGNAL(setCenter(QVariant, QVariant)), obj, SLOT(setCenter(QVariant, QVariant)));
+    connect(this, SIGNAL(addMarker(QVariant, QVariant)), obj, SLOT(addMarker(QVariant, QVariant)));
+
+    emit setCenter(25.000, 50.000);
+    emit addMarker(25.000, 50.000);
+
     ui->stackedWidget->setCurrentIndex(0);
     // this will hide the push button " check your work"
     ui->check_your_work->hide();
