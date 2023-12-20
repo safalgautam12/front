@@ -39,6 +39,10 @@ private slots:
     void on_lineEdit_Email_textChanged(const QString &text);
 
 
+    void on_pushButton_signup_clicked();
+
+    void on_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
 signals:

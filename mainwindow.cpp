@@ -4,6 +4,8 @@
 #include <QPixmap>
 #include <QRegularExpressionValidator>
 #include <QQuickItem>
+#include <QIcon>
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -54,22 +56,29 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->lineEdit_password, &QLineEdit::textChanged, this, &MainWindow::updateSubmitButtonState);
     connect(ui->lineEdit_Email, &QLineEdit::textChanged, this, &MainWindow::updateSubmitButtonState);
     connect(ui->checkBox, &QCheckBox::stateChanged, this, &MainWindow::updateSubmitButtonState);
+    connect(ui->pushButton_signup, SIGNAL(clicked()), this, SLOT(on_pushButton_signup_clicked()));
 
 
     // Initially disable the submit button
     ui->pushButton_2->setEnabled(false);
 
     // Set border radius for LineEdit widgets
-    QString lineEditStyle = "QLineEdit { border-radius: 10px; border: 2px solid #555555;  padding: 5px; }";
+    QString lineEditStyle = "QLineEdit { border-radius: 15px; border: 2px solid #555555;  padding: 5px; }";
     ui->lineEdit_username->setStyleSheet(lineEditStyle);
     ui->lineEdit_password->setStyleSheet(lineEditStyle);
     ui->lineEdit_Email->setStyleSheet(lineEditStyle);
+    ui->lineEdit_SignUp_Email->setStyleSheet(lineEditStyle);
+    ui->lineEdit_signUp_userName->setStyleSheet(lineEditStyle);
+    ui->linEdit_signUp_Password->setStyleSheet(lineEditStyle);
 
-    QString buttonStyle = "QPushButton { border-radius: 10px; border: 2px solid #555555;  padding: 5px; }";
+    QString buttonStyle = "QPushButton { border-radius: 15px; border: 2px solid #555555;  padding: 5px; }";
     ui->pushButton_2->setStyleSheet(buttonStyle);
     ui->pushButton_4->setStyleSheet(buttonStyle);
     ui->check_your_work->setStyleSheet(buttonStyle);
     ui->pushButton_signup->setStyleSheet(buttonStyle);
+    ui->pushButton->setStyleSheet(buttonStyle);
+    ui->submit_signUp->setStyleSheet(buttonStyle);
+    ui->pushButton_2->setStyleSheet(buttonStyle);
 
     // Set up a regular expression validator for email input
     QRegularExpression emailRegex("[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}");
@@ -78,8 +87,10 @@ MainWindow::MainWindow(QWidget *parent)
     QValidator *emailValidator = new QRegularExpressionValidator(emailRegex, this);
     ui->lineEdit_Email->setValidator(emailValidator);
 
-    QString groupBoxStyle = "QGroupBox { background-color: #FFE4C4; border:  border-radius: 2px; }";
+    QString groupBoxStyle = "QGroupBox { background-color: #FFE4C4; border:  border-radius: 15px; }";
     ui->groupBox->setStyleSheet(groupBoxStyle);
+    QIcon icon("qrc:/../../../Downloads/home.png");  // Replace with your resource path
+    ui->pushButton->setIcon(icon);
 }
 
 
@@ -146,11 +157,25 @@ void MainWindow::on_pushButton_4_clicked()
 
 void MainWindow::on_check_your_work_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(2);
+    ui->stackedWidget->setCurrentIndex(1);
 }
 void MainWindow::on_lineEdit_Email_textChanged(const QString &) {
     // Perform email validation or any required actions when the text changes
     updateSubmitButtonState(); // Call your validation logic
 
+}
+
+
+void MainWindow::on_pushButton_signup_clicked()
+{
+
+    ui->stackedWidget->setCurrentIndex(2);
+
+}
+
+
+void MainWindow::on_pushButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
 }
 
