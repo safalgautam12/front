@@ -21,8 +21,6 @@ public:
 
 private slots:
 
-    void on_actionNavigate_triggered();
-
     void on_pushButton_2_clicked();
 
 
@@ -42,6 +40,14 @@ private slots:
     void on_pushButton_signup_clicked();
 
     void on_pushButton_clicked();
+
+    void on_actionDashboard_triggered();
+
+    void on_actionProducts_triggered();
+
+    void on_actionUsers_triggered();
+
+    void on_actionVehicles_triggered();
 
 private:
     Ui::MainWindow *ui;

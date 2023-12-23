@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>Assets/bars.png</file>
+        <file>Assets/front_image.png</file>
+        <file>Assets/home.png</file>
+        <file>Assets/navigate_left.png</file>
+        <file>Assets/navigate_right.png</file>
+        <file>Assets/product.png</file>
+        <file>Assets/users.png</file>
+        <file>Assets/vehicle.png</file>
+    </qresource>
+</RCC>

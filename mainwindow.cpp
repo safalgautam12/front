@@ -26,21 +26,15 @@ MainWindow::MainWindow(QWidget *parent)
     // this will hide the push button " check your work"
     ui->check_your_work->hide();
     // these two lines are for adding picture
-    QPixmap pix("C:/Users/safal/OneDrive/Desktop/BazarMilo/Assets/front_image.png");
-    ui->label_pic->setPixmap(pix);
     QVBoxLayout *mainLayout = new QVBoxLayout(ui->centralwidget);
 
     QGroupBox *groupBox = new QGroupBox("Group Box");
     groupBox->setStyleSheet("QGroupBox { background-color: #FFE4C4; border: 2px solid #555555; border-radius: 2px; }");
     QVBoxLayout *groupBoxLayout = new QVBoxLayout(groupBox);
 
-    QLabel *labelPic = new QLabel;
-    labelPic->setPixmap(pix);
-    labelPic->setScaledContents(true);  // Ensure image scales within the QLabel
 
     QPushButton *checkYourWork = new QPushButton("Check Your Work");
 
-    groupBoxLayout->addWidget(labelPic, 0, Qt::AlignCenter); // Set alignment for label
     groupBoxLayout->addWidget(checkYourWork, 0, Qt::AlignCenter); // Set alignment for button
 
     groupBox->setLayout(groupBoxLayout); // Set layout for group box
@@ -49,7 +43,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     // Set stretch factors for the main layout to control resizing behavior
     mainLayout->setStretchFactor(groupBox, 1);
-
+    ui->pushButton->setIcon(QIcon("qrc:/new/prefix1/Assets/home.png"));
+    ui->pushButton->setCheckable(true);
 
     // Connect signals of LineEdits to updateSubmitButtonState slot
     connect(ui->lineEdit_username, &QLineEdit::textChanged, this, &MainWindow::updateSubmitButtonState);
@@ -80,6 +75,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->submit_signUp->setStyleSheet(buttonStyle);
     ui->pushButton_2->setStyleSheet(buttonStyle);
 
+
     // Set up a regular expression validator for email input
     QRegularExpression emailRegex("[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}");
 
@@ -89,7 +85,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     QString groupBoxStyle = "QGroupBox { background-color: #FFE4C4; border:  border-radius: 15px; }";
     ui->groupBox->setStyleSheet(groupBoxStyle);
-    QIcon icon("qrc:/../../../Downloads/home.png");  // Replace with your resource path
+    QIcon icon("qrc:/new/prefix1/Assets/home.png");  // Replace with your resource path
     ui->pushButton->setIcon(icon);
 }
 
@@ -99,13 +95,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
-
-
-void MainWindow::on_actionNavigate_triggered()
-{
-    ui->stackedWidget->setCurrentIndex(1);
-}
 void MainWindow::on_lineEdit_username_textChanged(const QString &arg1) {
     Q_UNUSED(arg1);
     updateSubmitButtonState();
@@ -177,5 +166,31 @@ void MainWindow::on_pushButton_signup_clicked()
 void MainWindow::on_pushButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(0);
+}
+
+
+
+
+void MainWindow::on_actionDashboard_triggered()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+
+void MainWindow::on_actionProducts_triggered()
+{
+
+}
+
+
+void MainWindow::on_actionUsers_triggered()
+{
+
+}
+
+
+void MainWindow::on_actionVehicles_triggered()
+{
+
 }
 

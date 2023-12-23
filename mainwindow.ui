@@ -21,220 +21,259 @@
        <number>2</number>
       </property>
       <widget class="QWidget" name="page_1">
-       <layout class="QHBoxLayout" name="horizontalLayout_3">
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_2">
-          <item>
-           <widget class="QGroupBox" name="groupBox">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>12</x>
+          <y>5</y>
+          <width>1391</width>
+          <height>1051</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QGroupBox" name="groupBox">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>600</width>
+             <height>125</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>600</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="title">
+            <string/>
+           </property>
+           <widget class="QPushButton" name="check_your_work">
+            <property name="geometry">
+             <rect>
+              <x>230</x>
+              <y>490</y>
+              <width>111</width>
+              <height>31</height>
+             </rect>
             </property>
-            <property name="minimumSize">
-             <size>
-              <width>600</width>
-              <height>0</height>
-             </size>
+            <property name="text">
+             <string>Check your work</string>
             </property>
-            <property name="title">
+           </widget>
+           <widget class="QPushButton" name="pushButton_2">
+            <property name="geometry">
+             <rect>
+              <x>2</x>
+              <y>490</y>
+              <width>91</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">  border: 1px solid black;
+  border-radius: 50px 20px;</string>
+            </property>
+            <property name="text">
+             <string>Submit</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_5">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>40</y>
+              <width>391</width>
+              <height>51</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>28</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Get Started Now</string>
+            </property>
+           </widget>
+           <widget class="QWidget" name="layoutWidget">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>240</y>
+              <width>381</width>
+              <height>68</height>
+             </rect>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout">
+             <item>
+              <widget class="QLabel" name="label_2">
+               <property name="maximumSize">
+                <size>
+                 <width>181</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>password</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout">
+               <item>
+                <widget class="QLineEdit" name="lineEdit_password">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="echoMode">
+                  <enum>QLineEdit::Password</enum>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="layoutWidget">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>125</y>
+              <width>381</width>
+              <height>66</height>
+             </rect>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <item>
+              <widget class="QLabel" name="label">
+               <property name="font">
+                <font>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Name</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_username"/>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QLabel" name="label_6">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>340</y>
+              <width>63</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="text">
              <string/>
             </property>
-            <widget class="QPushButton" name="check_your_work">
-             <property name="geometry">
-              <rect>
-               <x>230</x>
-               <y>490</y>
-               <width>111</width>
-               <height>31</height>
-              </rect>
-             </property>
-             <property name="text">
-              <string>Check your work</string>
-             </property>
-            </widget>
-            <widget class="QPushButton" name="pushButton_2">
-             <property name="geometry">
-              <rect>
-               <x>2</x>
-               <y>490</y>
-               <width>91</width>
-               <height>29</height>
-              </rect>
-             </property>
-             <property name="text">
-              <string>Submit</string>
-             </property>
-            </widget>
-            <widget class="QLabel" name="label_5">
-             <property name="geometry">
-              <rect>
-               <x>10</x>
-               <y>40</y>
-               <width>391</width>
-               <height>51</height>
-              </rect>
-             </property>
-             <property name="font">
-              <font>
-               <pointsize>28</pointsize>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="text">
-              <string>Get Started Now</string>
-             </property>
-            </widget>
-            <widget class="QWidget" name="layoutWidget">
-             <property name="geometry">
-              <rect>
-               <x>0</x>
-               <y>240</y>
-               <width>381</width>
-               <height>68</height>
-              </rect>
-             </property>
-             <layout class="QVBoxLayout" name="verticalLayout">
-              <item>
-               <widget class="QLabel" name="label_2">
-                <property name="maximumSize">
-                 <size>
-                  <width>181</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <pointsize>14</pointsize>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>password</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <layout class="QHBoxLayout" name="horizontalLayout">
-                <item>
-                 <widget class="QLineEdit" name="lineEdit_password">
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="echoMode">
-                   <enum>QLineEdit::Password</enum>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-             </layout>
-            </widget>
-            <widget class="QWidget" name="layoutWidget">
-             <property name="geometry">
-              <rect>
-               <x>0</x>
-               <y>125</y>
-               <width>381</width>
-               <height>66</height>
-              </rect>
-             </property>
-             <layout class="QVBoxLayout" name="verticalLayout_2">
-              <item>
-               <widget class="QLabel" name="label">
-                <property name="font">
-                 <font>
-                  <pointsize>14</pointsize>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>Name</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="lineEdit_username"/>
-              </item>
-             </layout>
-            </widget>
-            <widget class="QLabel" name="label_6">
-             <property name="geometry">
-              <rect>
-               <x>0</x>
-               <y>340</y>
-               <width>63</width>
-               <height>20</height>
-              </rect>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
-            <widget class="QWidget" name="layoutWidget">
-             <property name="geometry">
-              <rect>
-               <x>0</x>
-               <y>330</y>
-               <width>381</width>
-               <height>66</height>
-              </rect>
-             </property>
-             <layout class="QVBoxLayout" name="verticalLayout_3">
-              <item>
-               <widget class="QLabel" name="label_7">
-                <property name="font">
-                 <font>
-                  <pointsize>14</pointsize>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>Email address</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="lineEdit_Email"/>
-              </item>
-             </layout>
-            </widget>
-            <widget class="QCheckBox" name="checkBox">
-             <property name="geometry">
-              <rect>
-               <x>10</x>
-               <y>410</y>
-               <width>191</width>
-               <height>21</height>
-              </rect>
-             </property>
-             <property name="text">
-              <string>I agree with the policy</string>
-             </property>
-            </widget>
-            <widget class="QPushButton" name="pushButton_signup">
-             <property name="geometry">
-              <rect>
-               <x>0</x>
-               <y>440</y>
-               <width>93</width>
-               <height>29</height>
-              </rect>
-             </property>
-             <property name="text">
-              <string>signup</string>
-             </property>
-            </widget>
            </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="label_pic">
+           <widget class="QWidget" name="layoutWidget">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>330</y>
+              <width>381</width>
+              <height>66</height>
+             </rect>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <item>
+              <widget class="QLabel" name="label_7">
+               <property name="font">
+                <font>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Email address</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_Email"/>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QCheckBox" name="checkBox">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>410</y>
+              <width>191</width>
+              <height>21</height>
+             </rect>
+            </property>
             <property name="text">
-             <string>TextLabel</string>
+             <string>I agree with the policy</string>
             </property>
            </widget>
-          </item>
-         </layout>
-        </item>
-       </layout>
+           <widget class="QPushButton" name="pushButton_signup">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>440</y>
+              <width>93</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"> border: 1px solid blacks;
+border-radius: 15px;
+</string>
+            </property>
+            <property name="text">
+             <string>signup</string>
+            </property>
+           </widget>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+          <widget class="QLabel" name="label_pic">
+           <property name="minimumSize">
+            <size>
+             <width>782</width>
+             <height>125</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>782</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="assets.qrc">:/new/prefix1/Assets/front_image.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
       </widget>
       <widget class="QWidget" name="page_3">
        <widget class="QPushButton" name="pushButton_4">
@@ -242,12 +281,35 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>171</width>
+          <width>41</width>
           <height>31</height>
          </rect>
         </property>
+        <property name="styleSheet">
+         <string notr="true">image: url(:/new/prefix1/Assets/home.png);</string>
+        </property>
         <property name="text">
-         <string>go to original page</string>
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="assets.qrc">
+          <normaloff>:/new/prefix1/Assets/home.png</normaloff>
+          <normalon>:/new/prefix1/Assets/home.png</normalon>:/new/prefix1/Assets/home.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="autoRepeat">
+         <bool>true</bool>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>true</bool>
         </property>
        </widget>
        <widget class="QQuickWidget" name="quickWidget">
@@ -275,18 +337,21 @@
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>20</y>
+          <y>10</y>
           <width>461</width>
-          <height>601</height>
+          <height>611</height>
          </rect>
         </property>
         <property name="font">
          <font>
-          <pointsize>26</pointsize>
+          <pointsize>20</pointsize>
          </font>
         </property>
         <property name="title">
-         <string>Sign Up</string>
+         <string>                Sign UP</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
         </property>
         <widget class="QWidget" name="layoutWidget">
          <property name="geometry">
@@ -411,6 +476,37 @@
           </item>
          </layout>
         </widget>
+        <widget class="QPushButton" name="pushButton">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>31</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>3</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>HOME</string>
+         </property>
+         <property name="icon">
+          <iconset resource="assets.qrc">
+           <normaloff>:/new/prefix1/Assets/navigate_left.png</normaloff>:/new/prefix1/Assets/navigate_left.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>10</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="default">
+          <bool>true</bool>
+         </property>
+        </widget>
        </widget>
        <widget class="QLabel" name="label_3">
         <property name="geometry">
@@ -435,24 +531,6 @@
          </rect>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>191</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
       </widget>
       <widget class="QWidget" name="page_4">
        <widget class="QLabel" name="label_4">
@@ -467,43 +545,6 @@
         <property name="text">
          <string>THIS IS FOR MESSAGES ONLY</string>
         </property>
-       </widget>
-       <widget class="QListWidget" name="listWidget">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>256</width>
-          <height>192</height>
-         </rect>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>256</width>
-          <height>192</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>256</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <item>
-         <property name="text">
-          <string>Dashboard</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Completed work</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Work to do </string>
-         </property>
-        </item>
        </widget>
       </widget>
      </widget>
@@ -521,16 +562,54 @@
    </property>
    <widget class="QMenu" name="menumaps">
     <property name="title">
-     <string>maps</string>
+     <string/>
     </property>
-    <addaction name="actionNavigate"/>
+    <property name="icon">
+     <iconset resource="assets.qrc">
+      <normaloff>:/new/prefix1/Assets/bars.png</normaloff>:/new/prefix1/Assets/bars.png</iconset>
+    </property>
+    <addaction name="actionDashboard"/>
+    <addaction name="actionProducts"/>
+    <addaction name="actionUsers"/>
+    <addaction name="actionVehicles"/>
    </widget>
    <addaction name="menumaps"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionNavigate">
+  <action name="actionDashboard">
+   <property name="icon">
+    <iconset resource="assets.qrc">
+     <normaloff>:/new/prefix1/Assets/home.png</normaloff>:/new/prefix1/Assets/home.png</iconset>
+   </property>
    <property name="text">
-    <string>Navigate</string>
+    <string>Dashboard</string>
+   </property>
+  </action>
+  <action name="actionProducts">
+   <property name="icon">
+    <iconset resource="assets.qrc">
+     <normaloff>:/new/prefix1/Assets/product.png</normaloff>:/new/prefix1/Assets/product.png</iconset>
+   </property>
+   <property name="text">
+    <string>Products</string>
+   </property>
+  </action>
+  <action name="actionUsers">
+   <property name="icon">
+    <iconset resource="assets.qrc">
+     <normaloff>:/new/prefix1/Assets/users.png</normaloff>:/new/prefix1/Assets/users.png</iconset>
+   </property>
+   <property name="text">
+    <string>Users</string>
+   </property>
+  </action>
+  <action name="actionVehicles">
+   <property name="icon">
+    <iconset resource="assets.qrc">
+     <normaloff>:/new/prefix1/Assets/vehicle.png</normaloff>:/new/prefix1/Assets/vehicle.png</iconset>
+   </property>
+   <property name="text">
+    <string>Vehicles</string>
    </property>
   </action>
  </widget>
@@ -548,6 +627,8 @@
   <tabstop>lineEdit_password</tabstop>
   <tabstop>pushButton_4</tabstop>
  </tabstops>
- <resources/>
+ <resources>
+  <include location="assets.qrc"/>
+ </resources>
  <connections/>
 </ui>
