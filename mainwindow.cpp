@@ -173,19 +173,19 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_actionDashboard_triggered()
 {
-    ui->stackedWidget->setCurrentIndex(0);
+    ui->stackedWidget->setCurrentIndex(1);
 }
 
 
 void MainWindow::on_actionProducts_triggered()
 {
-
+    ui->stackedWidget->setCurrentIndex(4);
 }
 
 
 void MainWindow::on_actionUsers_triggered()
 {
-
+    ui->stackedWidget->setCurrentIndex(3);
 }
 
 
