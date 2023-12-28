@@ -8,5 +8,8 @@
         <file>Assets/product.png</file>
         <file>Assets/users.png</file>
         <file>Assets/vehicle.png</file>
+        <file>Assets/find_user.png</file>
+        <file>Assets/not_found.png</file>
     </qresource>
+    <qresource prefix="/"/>
 </RCC>

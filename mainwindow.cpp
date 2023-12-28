@@ -46,12 +46,22 @@ MainWindow::MainWindow(QWidget *parent)
     ui->pushButton->setIcon(QIcon("qrc:/new/prefix1/Assets/home.png"));
     ui->pushButton->setCheckable(true);
 
+
+    //Assigning list of ids for validification
+    validIds.append("1234h");
+    validIds.append("5678h");
+    validIds.append("9012h");
     // Connect signals of LineEdits to updateSubmitButtonState slot
     connect(ui->lineEdit_username, &QLineEdit::textChanged, this, &MainWindow::updateSubmitButtonState);
     connect(ui->lineEdit_password, &QLineEdit::textChanged, this, &MainWindow::updateSubmitButtonState);
     connect(ui->lineEdit_Email, &QLineEdit::textChanged, this, &MainWindow::updateSubmitButtonState);
     connect(ui->checkBox, &QCheckBox::stateChanged, this, &MainWindow::updateSubmitButtonState);
     connect(ui->pushButton_signup, SIGNAL(clicked()), this, SLOT(on_pushButton_signup_clicked()));
+    connect(ui->lineEdit_6, &QLineEdit::textChanged, this, &MainWindow::on_lineEdit_6_textChanged);
+    // Hide groupBox_3 by default
+    ui->groupBox_3->hide();
+    ui->label_17->hide();
+
 
 
     // Initially disable the submit button
@@ -191,6 +201,39 @@ void MainWindow::on_actionUsers_triggered()
 
 void MainWindow::on_actionVehicles_triggered()
 {
+    ui->stackedWidget->setCurrentIndex(5);
 
 }
+
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+}
+
+
+void MainWindow::on_lineEdit_6_textChanged(const QString &text)
+{
+    QString enteredId = text.trimmed(); // Remove leading/trailing spaces if needed
+    // Check if enteredId exists in the array of valid IDs (checking for complete matches)
+    bool idFound = false;
+    for (int i = 0; i < validIds.size(); ++i) {
+        if (enteredId == validIds[i]) {
+            idFound = true;
+            break;
+        }
+    }
+
+    // Show or hide groupBox_3 based on whether a matching ID was found
+    if (idFound) {
+        ui->label_17->hide();
+        ui->groupBox_3->show();
+    } else {
+        ui->groupBox_3->hide();
+        ui->label_17->show();
+    }
+
+
+}
+
 

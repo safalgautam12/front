@@ -49,8 +49,13 @@ private slots:
 
     void on_actionVehicles_triggered();
 
+    void on_pushButton_3_clicked();
+    void on_lineEdit_6_textChanged(const QString &text);
+
+
 private:
     Ui::MainWindow *ui;
+    QString validIds;
 signals:
     void setCenter(QVariant, QVariant);
     void addMarker(QVariant, QVariant);
