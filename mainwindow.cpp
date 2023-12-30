@@ -47,6 +47,10 @@ MainWindow::MainWindow(QWidget *parent)
     ui->pushButton->setCheckable(true);
 
 
+    ui->groupBox_4->hide();
+    ui->groupBox_5->hide();
+
+
     //Assigning list of ids for validification
     validIds.append("1234h");
     validIds.append("5678h");
@@ -58,6 +62,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->checkBox, &QCheckBox::stateChanged, this, &MainWindow::updateSubmitButtonState);
     connect(ui->pushButton_signup, SIGNAL(clicked()), this, SLOT(on_pushButton_signup_clicked()));
     connect(ui->lineEdit_6, &QLineEdit::textChanged, this, &MainWindow::on_lineEdit_6_textChanged);
+
     // Hide groupBox_3 by default
     ui->groupBox_3->hide();
     ui->label_17->hide();
@@ -142,6 +147,7 @@ void MainWindow::on_pushButton_2_clicked()
     else
     {
         QMessageBox::warning(this,"login","username and password is not correct");
+
     }
 }
 
@@ -149,7 +155,7 @@ void MainWindow::on_pushButton_2_clicked()
 
 void MainWindow::on_pushButton_4_clicked()
 {
-   ui->stackedWidget->setCurrentIndex(0);
+    ui->stackedWidget->setCurrentIndex(4);
 }
 
 
@@ -214,26 +220,98 @@ void MainWindow::on_pushButton_3_clicked()
 
 void MainWindow::on_lineEdit_6_textChanged(const QString &text)
 {
-    QString enteredId = text.trimmed(); // Remove leading/trailing spaces if needed
+    QString enteredId = text.trimmed(); // Remove leading/trailing spaces if necessary
+    int requiredLength=5;
     // Check if enteredId exists in the array of valid IDs (checking for complete matches)
     bool idFound = false;
-    for (int i = 0; i < validIds.size(); ++i) {
-        if (enteredId == validIds[i]) {
-            idFound = true;
-            break;
-        }
-    }
+
+    if (requiredLength > 0 && enteredId.length() == requiredLength) {
+          idFound = validIds.contains(enteredId);
+
+
+
 
     // Show or hide groupBox_3 based on whether a matching ID was found
     if (idFound) {
+        // Hardcoded information
+        QString status = "Pending";
+        QString addedOn = "2023-01-01"; // Added date
+        QString name = "John Doe";
+        QString deliveredOn = "2023-01-05"; // Delivered date
+        QString location = "Sample Location";
+
+
+        ui->lineEdit->setText(enteredId);
+        ui->lineEdit_2->setText(status);
+        ui->lineEdit_3->setText(addedOn);
+        ui->lineEdit_4->setText(deliveredOn);
+        ui->lineEdit_5->setText(location);
+
+
         ui->label_17->hide();
         ui->groupBox_3->show();
-    } else {
+     }
+
+    else {
+        ui->lineEdit->clear();
+        ui->lineEdit_2->clear();
+        ui->lineEdit_3->clear();
+        ui->lineEdit_4->clear();
+        ui->lineEdit_5->clear();
+        ui->lineEdit_6->clear();
         ui->groupBox_3->hide();
         ui->label_17->show();
     }
-
+    }
 
 }
 
+
+
+void MainWindow::on_pushButton_6_clicked()
+{
+    ui->groupBox_4->show();
+    ui->pushButton_6->setEnabled(false);
+
+}
+
+
+void MainWindow::on_pushButton_7_clicked()
+{
+    ui->lineEdit_7->clear();
+    ui->lineEdit_8->clear();
+    ui->lineEdit_9->clear();
+    ui->lineEdit_10->clear();
+    ui->lineEdit_11->clear();
+    ui->lineEdit_12->clear();
+    ui->groupBox_4->hide();
+    ui->pushButton_6->setEnabled(true);
+}
+
+
+void MainWindow::on_pushButton_8_clicked()
+{
+    ui->groupBox_5->show();
+    ui->pushButton_8->setEnabled(false);
+
+}
+
+
+void MainWindow::on_pushButton_9_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+    ui->pushButton->setEnabled(true);
+}
+
+
+void MainWindow::on_pushButton_10_clicked()
+{
+
+}
+
+
+void MainWindow::on_pushButton_13_clicked()
+{
+
+}
 
