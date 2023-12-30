@@ -19,15 +19,16 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+
+
+
+private slots:
     void on_pushButton_2_clicked();
 
 
     void on_pushButton_4_clicked();
-
     void on_check_your_work_clicked();
-
     void on_lineEdit_username_textChanged(const QString &arg1);
-private slots:
 
 
     void on_lineEdit_password_textChanged(const QString &arg1);
@@ -63,6 +64,8 @@ private slots:
 
 
     void on_pushButton_10_clicked();
+
+    void on_pushButton_13_clicked();
 
 private:
     Ui::MainWindow *ui;

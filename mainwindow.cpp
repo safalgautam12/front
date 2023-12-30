@@ -49,6 +49,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->groupBox_4->hide();
     ui->groupBox_5->hide();
+    ui->groupBox_7->hide();
 
 
     //Assigning list of ids for validification
@@ -102,6 +103,12 @@ MainWindow::MainWindow(QWidget *parent)
     ui->groupBox->setStyleSheet(groupBoxStyle);
     QIcon icon("qrc:/new/prefix1/Assets/home.png");  // Replace with your resource path
     ui->pushButton->setIcon(icon);
+
+    // disabling the menubar
+    ui->actionDashboard->setEnabled(false);
+     ui->actionProducts->setEnabled(false);
+    ui->actionUsers->setEnabled(false);
+     ui->actionVehicles->setEnabled(false);
 }
 
 
@@ -131,6 +138,9 @@ void MainWindow::updateSubmitButtonState() {
     ui->pushButton_2->setEnabled(!username.isEmpty() && !password.isEmpty() && isEmailValid && isCheckBoxChecked);
 
 
+
+
+
 }
 
 
@@ -143,6 +153,10 @@ void MainWindow::on_pushButton_2_clicked()
     {
         QMessageBox::information(this,"login","username and password is correct");
         ui->check_your_work->show();
+        ui->actionDashboard->setEnabled(true);
+        ui->actionProducts->setEnabled(true);
+        ui->actionUsers->setEnabled(true);
+        ui->actionVehicles->setEnabled(true);
     }
     else
     {
@@ -312,6 +326,16 @@ void MainWindow::on_pushButton_10_clicked()
 
 void MainWindow::on_pushButton_13_clicked()
 {
+    QString enteredId = ui->lineEdit_18->text();
+    QString correctId="123456";
+    if(        enteredId==correctId)
+    {
+         QMessageBox::information(this," ","Vehicl_Id is correct");
+    }
+else
+    {
+        ui->groupBox_7->show();
+    }
 
 }
 
